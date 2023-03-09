@@ -22,7 +22,7 @@ const HeroDetails = () => {
   return (
     currentHero.id && (
       <main>
-        <Link to={backLinkHref}>Go back</Link>
+        <Link to={backLinkHref}>Go back 1</Link>
         <div>
           <div>
             <img src={currentHero.image} alt={currentHero.name} />
