@@ -9,6 +9,7 @@ import {
   SearchInput,
   SearchBtn,
   IconSearch,
+  IconCross,
   List,
   CharacterCard,
   HeroImage,
@@ -38,10 +39,15 @@ const Home = () => {
 
   return (
     <MainWrapp>
-      <LogoImg src={logo} alt="" width={600} height={200} />
-      <SearchInputWrapp>
+      <LogoImg src={logo} alt="Rick and Morty logo" width={600} height={200} />
+      <SearchInputWrapp
+        onSubmit={event => {
+          event.preventDefault();
+          setSearchQuery('');
+        }}
+      >
         <SearchBtn type="button">
-          <IconSearch />
+          {searchQuery === '' ? <IconSearch /> : <IconCross />}
         </SearchBtn>
         <label for="searchQuery"></label>
         <SearchInput
@@ -50,6 +56,7 @@ const Home = () => {
           placeholder="Filter by name..."
           name="searchQuery"
           id="searchQuery"
+          autocomplete="nope"
           onChange={event => setSearchQuery(event.target.value)}
         />
       </SearchInputWrapp>

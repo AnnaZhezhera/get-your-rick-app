@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import { NavLink } from 'react-router-dom';
 import { ReactComponent as SearchIcon } from 'images/svg/SearchIcon.svg';
+import { ReactComponent as CrossIcon } from 'images/svg/CrossIcon.svg';
 
 export const MainWrapp = styled.main`
   width: 1020px;
@@ -35,8 +36,10 @@ export const SearchInput = styled.input`
   &::placeholder {
     color: rgba(0, 0, 0, 0.5);
   }
+  &:hover,
   &:focus {
     outline: none;
+    background-color: transparent;
   }
 `;
 
@@ -51,18 +54,25 @@ export const SearchBtn = styled.button`
 
   &:hover {
     fill: #111111;
+    stroke-opacity: 0;
+    color: red;
   }
 
   &:focus,
   &:focus-visible,
   &:focus-within {
     height: 61px;
-    outline: 1px solid rgba(0, 0, 0, 0.5);
   }
 `;
 
 export const IconSearch = styled(SearchIcon)`
   color: rgba(0, 0, 0, 0.54);
+`;
+
+export const IconCross = styled(CrossIcon)`
+  width: 24px;
+  height: 24px;
+  stroke-opacity: 0.54;
 `;
 
 export const CardLink = styled(NavLink)`

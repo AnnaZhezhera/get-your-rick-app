@@ -4,7 +4,7 @@ import { Layout } from './Layout/Layout';
 import { AppWrapp } from './App.styled';
 
 const Home = lazy(() => import('pages/Home/Home'));
-const HeroDetails = lazy(() => import('pages/HeroDetails'));
+const HeroDetails = lazy(() => import('pages/HeroDetails/HeroDetails'));
 
 export const App = () => {
   return (
