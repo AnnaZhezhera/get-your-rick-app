@@ -33,9 +33,15 @@ export const GoBackLink = styled(NavLink)`
   margin-bottom: 32px;
 
   &:hover {
-    fill: darkcyan;
-    color: darkcyan;
+    fill: rgba(142, 142, 147, 1);
+    color: rgba(142, 142, 147, 1);
   }
+`;
+
+export const HeroAvatarÇontainer = styled.div`
+  display: flex;
+  justify-content: center;
+  margin-bottom: 16px;
 `;
 
 export const HeroAvatar = styled.img`
@@ -45,4 +51,45 @@ export const HeroAvatar = styled.img`
   object-fit: cover;
   border: 5px solid #f2f2f7;
   border-radius: 50%;
+`;
+
+export const HeroName = styled.h2`
+  font-family: 'Roboto';
+  font-size: 48px;
+  line-height: 1.17;
+  text-align: center;
+  margin-bottom: 48px;
+`;
+
+export const ListTitle = styled.h3`
+  font-family: 'Roboto';
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: 0.15px;
+  color: rgba(142, 142, 147, 1);
+  text-align: center;
+  margin-bottom: 48px;
+`;
+
+export const HeroListItem = styled.li`
+  border-bottom: 1px solid rgba(33, 33, 33, 0.08);
+  padding: 9px 0 12px;
+`;
+
+export const ListItemName = styled.span`
+  font-family: 'Roboto';
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.5;
+  letter-spacing: 0.15px;
+  color: rgba(8, 31, 50, 1);
+`;
+
+export const ListItemText = styled.p`
+  font-family: 'Roboto';
+  font-size: 14px;
+  line-height: 1.4;
+  letter-spacing: 0.25px;
+  color: rgba(110, 121, 140, 1);
 `;

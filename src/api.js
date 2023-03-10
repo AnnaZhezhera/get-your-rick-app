@@ -4,7 +4,6 @@ export const imageBaseUrl = 'https://rickandmortyapi.com/api';
 
 export const fetchHeroes = async () => {
   const response = await axios.get('https://rickandmortyapi.com/api/character');
-  console.log(response);
   return response.data.results;
 };
 

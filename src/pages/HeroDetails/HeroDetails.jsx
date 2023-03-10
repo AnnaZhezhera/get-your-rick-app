@@ -8,8 +8,13 @@ import {
   ArrowBackIcon,
   GoBackText,
   HeroAvatar,
+  HeroName,
+  HeroAvatarÇontainer,
+  ListTitle,
+  HeroListItem,
+  ListItemName,
+  ListItemText,
 } from './HeroDetails.styled';
-// import { getHero, imageBaseUrl } from '../api';
 
 const HeroDetails = () => {
   const { id } = useParams();
@@ -36,33 +41,36 @@ const HeroDetails = () => {
       {currentHero.id && (
         <HeroCardWrapp>
           <div>
-            <div>
+            <HeroAvatarÇontainer>
               <HeroAvatar src={currentHero.image} alt={currentHero.name} />
-            </div>
+            </HeroAvatarÇontainer>
             <div>
-              <h2>{currentHero.name}</h2>
-              <h3>Information</h3>
+              <HeroName>{currentHero.name}</HeroName>
+              <ListTitle>Information</ListTitle>
               <ul>
-                <li>
-                  <p>Gender</p>
-                  <span>{currentHero.gender}</span>
-                </li>
-                <li>
-                  <p>Status</p>
-                  <span>{currentHero.status}</span>
-                </li>
-                <li>
-                  <p>Species</p>
-                  <span>{currentHero.species}</span>
-                </li>
-                <li>
-                  <p>Origin</p>
-                  <span>{currentHero.origin.name}</span>
-                </li>
-                <li>
-                  <p>Type</p>
-                  <span>{currentHero.type}</span>
-                </li>
+                <HeroListItem>
+                  <ListItemName>Gender</ListItemName>
+                  <ListItemText>{currentHero.gender}</ListItemText>
+                </HeroListItem>
+                <HeroListItem>
+                  <ListItemName>Status</ListItemName>
+                  <ListItemText>{currentHero.status}</ListItemText>
+                </HeroListItem>
+                <HeroListItem>
+                  <ListItemName>Species</ListItemName>
+                  <ListItemText>{currentHero.species}</ListItemText>
+                </HeroListItem>
+                <HeroListItem>
+                  <ListItemName>Origin</ListItemName>
+                  <ListItemText>{currentHero.origin.name}</ListItemText>
+                </HeroListItem>
+                <HeroListItem>
+                  <ListItemName>Type</ListItemName>
+                  {currentHero.type === '' && (
+                    <ListItemText>Unknown</ListItemText>
+                  )}
+                  <ListItemText>{currentHero.type}</ListItemText>
+                </HeroListItem>
               </ul>
             </div>
           </div>

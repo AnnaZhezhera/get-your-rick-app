@@ -23,7 +23,7 @@ import logo from '../../images/logo.png';
 const Home = () => {
   const [heroes, setHeroes] = useState([]);
   const [searchQuery, setSearchQuery] = useState('');
-
+  console.log('heroes', heroes);
   const location = useLocation();
 
   useEffect(() => {
@@ -46,10 +46,16 @@ const Home = () => {
           setSearchQuery('');
         }}
       >
-        <SearchBtn type="button">
+        <SearchBtn
+          type="button"
+          onClick={event => {
+            event.preventDefault();
+            setSearchQuery('');
+          }}
+        >
           {searchQuery === '' ? <IconSearch /> : <IconCross />}
         </SearchBtn>
-        <label for="searchQuery"></label>
+        <label htmlFor="searchQuery"></label>
         <SearchInput
           type="text"
           value={searchQuery}
