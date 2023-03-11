@@ -6,6 +6,7 @@ import { ReactComponent as CrossIcon } from 'images/svg/CrossIcon.svg';
 export const MainWrapp = styled.main`
   width: 1020px;
   margin: 0 auto;
+  padding-bottom: 168px;
 `;
 
 export const LogoImg = styled.img`
@@ -89,7 +90,6 @@ export const List = styled.ul`
   grid-template-columns: repeat(4, 1fr);
   grid-row-gap: 24px;
   grid-column-gap: 20px;
-  margin-bottom: 168px;
 `;
 
 export const CharacterCard = styled.li`
@@ -134,4 +134,29 @@ export const HeroImage = styled.img`
   height: 168px;
   object-fit: cover;
   object-position: 0 -30px;
+`;
+
+export const LoadMoreWrapp = styled.div`
+  width: 100%;
+  text-align: center;
+`;
+
+export const LoadMore = styled.button`
+  font-family: 'Roboto';
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.5;
+  padding: 12px 8px;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  border-radius: 8px;
+
+  float: center;
+  background-color: white;
+  margin-top: 48px;
+
+  cursor: pointer;
+
+  &:hover {
+    scale: 1.05;
+  }
 `;
