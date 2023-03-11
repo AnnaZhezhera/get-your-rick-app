@@ -23,8 +23,6 @@ const HeroDetails = () => {
   const location = useLocation();
   const backLinkHref = location.state?.from ?? '/';
 
-  console.log(location.state.from);
-
   useEffect(() => {
     const getHeroById = async heroId => {
       setCurrentHero(await getHero(heroId));
@@ -74,7 +72,7 @@ const HeroDetails = () => {
               </ul>
             </div>
           </div>
-          <Suspense fallback={<div>Loading subpage...</div>}>
+          <Suspense fallback={<div>Loading...</div>}>
             <Outlet />
           </Suspense>
         </HeroCardWrapp>

@@ -21,16 +21,7 @@ export const getHero = async heroId => {
   return response.data;
 };
 
-// export const getSearchedHero = async name => {
-//   const response = await axios.get(
-//     `https://rickandmortyapi.com/api/character/?name=${name}`
-//   );
-//   console.log('getSearchedHero', response.data);
-//   return response.data.results;
-// };
-
 export const getSearchedHero = async (page, name) => {
   const response = await axios.get(baseUrl + `?page=${page}&name=${name}`);
-  console.log('getSearchedHero', response.data);
   return response.data;
 };

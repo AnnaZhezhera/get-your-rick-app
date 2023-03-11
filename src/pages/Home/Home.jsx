@@ -23,21 +23,19 @@ import {
 import logo from '../../images/logo.png';
 
 const Home = () => {
-  const [searchParams, setSearchParams] = useSearchParams({
-    page: null,
-    search: null,
-  });
+  const [searchParams, setSearchParams] = useSearchParams();
 
   const [currentHeroes, setCurrentHeroes] = useState([]);
   const [allHeroesInfo, setAllHeroesInfo] = useState([]);
-  const [search, setSearch] = useState(searchParams.get('search'));
+
+  const [search, setSearch] = useState(searchParams.get('search') ?? '');
   const [showLoadMore, setShowLoadMore] = useState(true);
 
   const location = useLocation();
 
   useEffect(() => {
     const fetchCharacterInfo = async () => {
-      const search = searchParams.get('search') ?? '';
+      const search = searchParams.get('search');
       let fetchedHeroesInfo = { results: [], info: {} };
       try {
         if (search) {
@@ -45,8 +43,8 @@ const Home = () => {
         } else {
           fetchedHeroesInfo = await fetchHeroes();
         }
-      } catch (e) {
-        console.log(e);
+      } catch (error) {
+        console.log(error);
       }
 
       setCurrentHeroes(fetchedHeroesInfo.results);
