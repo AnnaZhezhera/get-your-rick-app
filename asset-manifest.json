@@ -1,9 +1,9 @@
 {
   "files": {
     "main.css": "/get-your-rick-app/static/css/main.6ecbe427.css",
-    "main.js": "/get-your-rick-app/static/js/main.7bb8fdb4.js",
-    "static/js/24.f15e7834.chunk.js": "/get-your-rick-app/static/js/24.f15e7834.chunk.js",
-    "static/js/189.fccc8a11.chunk.js": "/get-your-rick-app/static/js/189.fccc8a11.chunk.js",
+    "main.js": "/get-your-rick-app/static/js/main.b4943dd0.js",
+    "static/js/24.97b53d68.chunk.js": "/get-your-rick-app/static/js/24.97b53d68.chunk.js",
+    "static/js/189.5b79a28d.chunk.js": "/get-your-rick-app/static/js/189.5b79a28d.chunk.js",
     "static/js/279.9922ca69.chunk.js": "/get-your-rick-app/static/js/279.9922ca69.chunk.js",
     "static/media/logo.png": "/get-your-rick-app/static/media/logo.1169ced27a00bfcad56d.png",
     "index.html": "/get-your-rick-app/index.html",
@@ -11,13 +11,13 @@
     "static/media/SearchIcon.svg": "/get-your-rick-app/static/media/SearchIcon.a5c9ce5b9f03f498a79023ff0c10562e.svg",
     "static/media/ArrowBack.svg": "/get-your-rick-app/static/media/ArrowBack.2a840333707961800bfafc5db13c6366.svg",
     "main.6ecbe427.css.map": "/get-your-rick-app/static/css/main.6ecbe427.css.map",
-    "main.7bb8fdb4.js.map": "/get-your-rick-app/static/js/main.7bb8fdb4.js.map",
-    "24.f15e7834.chunk.js.map": "/get-your-rick-app/static/js/24.f15e7834.chunk.js.map",
-    "189.fccc8a11.chunk.js.map": "/get-your-rick-app/static/js/189.fccc8a11.chunk.js.map",
+    "main.b4943dd0.js.map": "/get-your-rick-app/static/js/main.b4943dd0.js.map",
+    "24.97b53d68.chunk.js.map": "/get-your-rick-app/static/js/24.97b53d68.chunk.js.map",
+    "189.5b79a28d.chunk.js.map": "/get-your-rick-app/static/js/189.5b79a28d.chunk.js.map",
     "279.9922ca69.chunk.js.map": "/get-your-rick-app/static/js/279.9922ca69.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.6ecbe427.css",
-    "static/js/main.7bb8fdb4.js"
+    "static/js/main.b4943dd0.js"
   ]
 }
