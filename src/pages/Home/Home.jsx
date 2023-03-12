@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useLocation, useSearchParams } from 'react-router-dom';
-import { fetchHeroes, fetchHeroesByUrl, getSearchedHero } from '../../api';
+import { fetchHeroes, getSearchedHero } from '../../api';
 //eslint-disable-next-line
 import {
   LogoImg,
@@ -26,7 +26,8 @@ const Home = () => {
   const [searchParams, setSearchParams] = useSearchParams();
 
   const [currentHeroes, setCurrentHeroes] = useState([]);
-  const [allHeroesInfo, setAllHeroesInfo] = useState([]);
+  const [allHeroes, setAllHeroes] = useState([]);
+  const [page, setPage] = useState(1);
 
   const [search, setSearch] = useState(searchParams.get('search') ?? '');
   const [showLoadMore, setShowLoadMore] = useState(true);
@@ -47,8 +48,8 @@ const Home = () => {
         console.log(error);
       }
 
-      setCurrentHeroes(fetchedHeroesInfo.results);
-      setAllHeroesInfo(fetchedHeroesInfo);
+      setCurrentHeroes(fetchedHeroesInfo.results.slice(0, 8)); // 8
+      setAllHeroes(fetchedHeroesInfo.results); // 20
 
       if (fetchedHeroesInfo.info.next) {
         setShowLoadMore(true);
@@ -61,24 +62,35 @@ const Home = () => {
   }, [searchParams]);
 
   const onSubmitFilter = search => {
+    setPage(1);
     setSearch(search);
     setSearchParams({ search });
   };
 
   const loadMore = async () => {
     const fetchUpdatedCharacterInfo = async () => {
-      const fetchedHeroesInfo = await fetchHeroesByUrl(allHeroesInfo.info.next);
+      let shownHeroes = currentHeroes;
+      let allHeroesLocal = allHeroes;
 
-      const currentUpdatedHeroes = currentHeroes.concat(
-        fetchedHeroesInfo.results
+      // load only if all.length - current.length < 8
+      if (allHeroesLocal.length - shownHeroes.length < 8) {
+        const fetchedHeroesInfo = await getSearchedHero(page + 1, '');
+
+        allHeroesLocal = allHeroesLocal.concat(fetchedHeroesInfo.results);
+
+        setAllHeroes(allHeroesLocal); // only if loaded new page add all loaded heroes
+        setPage(page + 1);
+
+        if (!fetchedHeroesInfo.info.next) {
+          setShowLoadMore(false);
+        }
+      }
+
+      const currentUpdatedHeroes = shownHeroes.concat(
+        allHeroesLocal.slice(shownHeroes.length, shownHeroes.length + 8)
       );
 
-      setCurrentHeroes(currentUpdatedHeroes);
-      setAllHeroesInfo(fetchedHeroesInfo);
-
-      if (!fetchedHeroesInfo.info.next) {
-        setShowLoadMore(false);
-      }
+      setCurrentHeroes(currentUpdatedHeroes); // current + next 8
     };
 
     fetchUpdatedCharacterInfo().catch(console.error);
@@ -93,7 +105,11 @@ const Home = () => {
           onSubmitFilter(search);
         }}
       >
-        <SearchBtn type="button" onClick={onSubmitFilter}>
+        <SearchBtn
+          type="button"
+          onClick={onSubmitFilter}
+          disabled={search ? false : true}
+        >
           {!search ? (
             <IconSearch />
           ) : (

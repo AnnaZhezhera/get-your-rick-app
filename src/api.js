@@ -11,11 +11,6 @@ export const fetchHeroes = async () => {
   return response.data;
 };
 
-export const fetchHeroesByUrl = async url => {
-  const response = await axios.get(url);
-  return response.data;
-};
-
 export const getHero = async heroId => {
   const response = await axios.get(`${baseUrl + heroId}`);
   return response.data;
