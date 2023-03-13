@@ -5,7 +5,13 @@ import { Suspense } from 'react';
 export const Layout = () => {
   return (
     <LayoutBox>
-      <Suspense fallback={<div>Loading page...</div>}>
+      <Suspense
+        fallback={
+          <div style={{ textAlign: 'center', paddingTop: 20 }}>
+            Loading page...
+          </div>
+        }
+      >
         <Outlet />
       </Suspense>
     </LayoutBox>

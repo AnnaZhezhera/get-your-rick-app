@@ -137,7 +137,7 @@ const Home = () => {
       </SearchInputWrapp>
 
       <List>
-        {currentHeroes.length === 0 && 'No Ricks found :('}
+        {!currentHeroes.length && 'No Ricks found :('}
 
         {currentHeroes.map(character => (
           <CharacterCard key={character.id}>

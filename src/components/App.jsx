@@ -5,6 +5,7 @@ import { AppWrapp } from './App.styled';
 
 const Home = lazy(() => import('pages/Home/Home'));
 const HeroDetails = lazy(() => import('pages/HeroDetails/HeroDetails'));
+const PageNotFound = lazy(() => import('pages/NotFound/PageNotFound'));
 
 export const App = () => {
   return (
@@ -13,7 +14,7 @@ export const App = () => {
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
           <Route path="character/:id" element={<HeroDetails />} />
-          <Route path="*" element={<Home />} />
+          <Route path="*" element={<PageNotFound />} />
         </Route>
       </Routes>
     </AppWrapp>

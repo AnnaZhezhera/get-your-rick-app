@@ -23,6 +23,7 @@ export const ArrowBackIcon = styled(ArrowBack)`
 
 export const GoBackLink = styled(NavLink)`
   display: flex;
+  width: 120px;
   font-weight: 700;
   font-size: 18px;
   line-height: 1.17;

@@ -72,9 +72,6 @@ const HeroDetails = () => {
               </ul>
             </div>
           </div>
-          <Suspense fallback={<div>Loading...</div>}>
-            <Outlet />
-          </Suspense>
         </HeroCardWrapp>
       )}
     </MainWrapp>
