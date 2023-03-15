@@ -2,7 +2,7 @@ import { LayoutBox } from './Layout.styled';
 import { Outlet } from 'react-router-dom';
 import { Suspense } from 'react';
 
-export const Layout = () => {
+export const Layout = ({ user }) => {
   return (
     <LayoutBox>
       <Suspense

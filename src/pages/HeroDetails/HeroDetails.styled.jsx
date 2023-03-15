@@ -5,7 +5,7 @@ import { ReactComponent as ArrowBack } from 'images/svg/ArrowBack.svg';
 export const MainWrapp = styled.div`
   width: 1440px;
   margin: 0 auto;
-  padding: 21px 50px 142px;
+  padding: 0 50px 142px;
 `;
 
 export const HeroCardWrapp = styled.div`

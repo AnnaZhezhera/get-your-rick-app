@@ -11,6 +11,8 @@ export const MainWrapp = styled.main`
 
 export const LogoImg = styled.img`
   margin: 86px auto 16px;
+  width: 600px;
+  height: 200px;
 `;
 
 export const SearchInputWrapp = styled.form`

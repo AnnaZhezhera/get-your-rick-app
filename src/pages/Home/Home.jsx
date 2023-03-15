@@ -22,7 +22,7 @@ import {
 } from './Home.styled';
 import logo from '../../images/logo.png';
 
-const Home = () => {
+const Home = ({ user }) => {
   const [searchParams, setSearchParams] = useSearchParams();
 
   const [currentHeroes, setCurrentHeroes] = useState([]);
@@ -72,7 +72,7 @@ const Home = () => {
       let shownHeroes = currentHeroes;
       let allHeroesLocal = allHeroes;
 
-      // load only if all.length - current.length < 8
+      // load only if length of all - current.length < 8
       if (allHeroesLocal.length - shownHeroes.length < 8) {
         const fetchedHeroesInfo = await getSearchedHero(page + 1, '');
 
@@ -98,7 +98,7 @@ const Home = () => {
 
   return (
     <MainWrapp>
-      <LogoImg src={logo} alt="Rick and Morty logo" width={600} height={200} />
+      <LogoImg src={logo} alt="Rick and Morty logo" />
       <SearchInputWrapp
         onSubmit={event => {
           event.preventDefault();
@@ -142,7 +142,7 @@ const Home = () => {
         {currentHeroes.map(character => (
           <CharacterCard key={character.id}>
             <CardLink
-              to={`character/${character.id}`}
+              to={`/character/${character.id}`}
               state={{ from: location }}
             >
               <div>
