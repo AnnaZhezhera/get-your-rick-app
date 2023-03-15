@@ -7,7 +7,7 @@ export const ProtectedRoute = ({ user, redirectPath = '/', children }) => {
   } else {
     return (
       <>
-        <AppBar />
+        <AppBar user={user} />
         {children ? children : <Outlet />}
       </>
     );
