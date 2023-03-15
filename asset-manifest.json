@@ -1,11 +1,11 @@
 {
   "files": {
     "main.css": "/get-your-rick-app/static/css/main.6e9b3582.css",
-    "main.js": "/get-your-rick-app/static/js/main.22550967.js",
+    "main.js": "/get-your-rick-app/static/js/main.d916566a.js",
     "static/js/793.e676534d.chunk.js": "/get-your-rick-app/static/js/793.e676534d.chunk.js",
     "static/js/189.185c7794.chunk.js": "/get-your-rick-app/static/js/189.185c7794.chunk.js",
     "static/js/830.8b48b427.chunk.js": "/get-your-rick-app/static/js/830.8b48b427.chunk.js",
-    "static/js/823.2dc092c4.chunk.js": "/get-your-rick-app/static/js/823.2dc092c4.chunk.js",
+    "static/js/823.3109027a.chunk.js": "/get-your-rick-app/static/js/823.3109027a.chunk.js",
     "static/js/384.dbb49550.chunk.js": "/get-your-rick-app/static/js/384.dbb49550.chunk.js",
     "static/media/logo.png": "/get-your-rick-app/static/media/logo.1169ced27a00bfcad56d.png",
     "index.html": "/get-your-rick-app/index.html",
@@ -13,15 +13,15 @@
     "static/media/SearchIcon.svg": "/get-your-rick-app/static/media/SearchIcon.a5c9ce5b9f03f498a79023ff0c10562e.svg",
     "static/media/ArrowBack.svg": "/get-your-rick-app/static/media/ArrowBack.2a840333707961800bfafc5db13c6366.svg",
     "main.6e9b3582.css.map": "/get-your-rick-app/static/css/main.6e9b3582.css.map",
-    "main.22550967.js.map": "/get-your-rick-app/static/js/main.22550967.js.map",
+    "main.d916566a.js.map": "/get-your-rick-app/static/js/main.d916566a.js.map",
     "793.e676534d.chunk.js.map": "/get-your-rick-app/static/js/793.e676534d.chunk.js.map",
     "189.185c7794.chunk.js.map": "/get-your-rick-app/static/js/189.185c7794.chunk.js.map",
     "830.8b48b427.chunk.js.map": "/get-your-rick-app/static/js/830.8b48b427.chunk.js.map",
-    "823.2dc092c4.chunk.js.map": "/get-your-rick-app/static/js/823.2dc092c4.chunk.js.map",
+    "823.3109027a.chunk.js.map": "/get-your-rick-app/static/js/823.3109027a.chunk.js.map",
     "384.dbb49550.chunk.js.map": "/get-your-rick-app/static/js/384.dbb49550.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.6e9b3582.css",
-    "static/js/main.22550967.js"
+    "static/js/main.d916566a.js"
   ]
 }
