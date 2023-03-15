@@ -3,11 +3,9 @@ import FacebookLogin from 'react-facebook-login';
 
 const LoginFB = ({ loginCallback }) => {
   const [login, setLogin] = useState(false);
-  const [data, setData] = useState({});
   const [, setPicture] = useState('');
 
   const responseFacebook = response => {
-    setData(response);
     if (response.accessToken && response.status !== 'unknown') {
       setLogin(true);
       setPicture(response.picture.data.url);
@@ -28,11 +26,6 @@ const LoginFB = ({ loginCallback }) => {
               scope="public_profile,user_friends"
               callback={responseFacebook}
               icon="fa-facebook"
-              onClick={() =>
-                loginCallback({
-                  name: data.name,
-                })
-              }
             />
           )}
         </h2>
