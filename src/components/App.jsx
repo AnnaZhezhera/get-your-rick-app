@@ -22,7 +22,7 @@ export const App = () => {
     <AppWrapp>
       <Routes>
         <Route path="/" element={<Layout />}>
-          <Route path="/" element={<LoginFB loginCallback={setAuth} />} />
+          <Route index path="/" element={<LoginFB loginCallback={setAuth} />} />
           <Route element={<ProtectedRoute user={user} />}>
             <Route path="home" element={<Home user={user} />} />
             <Route path="character/:id" element={<HeroDetails />} />
