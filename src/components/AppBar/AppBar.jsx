@@ -1,6 +1,4 @@
 export const AppBar = ({ user }) => {
-  console.log('AppBar user', user);
-  console.log('AppBar user.photo', user.photo);
   return (
     <header
       style={{
